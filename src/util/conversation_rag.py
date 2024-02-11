@@ -1,12 +1,12 @@
 from torch import cuda, bfloat16
 import transformers
-from langchain.embeddings.huggingface import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.chains import ConversationalRetrievalChain
-from langchain.memory import ConversationBufferMemory
-from langchain.llms import HuggingFacePipeline
+from langchain_community.embeddings.huggingface import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_community.chains import ConversationalRetrievalChain
+from langchain_community.memory import ConversationBufferMemory
+from langchain_community.llms import HuggingFacePipeline
 from huggingface_hub import login
-from langchain.prompts import PromptTemplate
+from langchain_community.prompts import PromptTemplate
 
 
 class Conversation_RAG:
@@ -51,7 +51,7 @@ class Conversation_RAG:
         generate_text = transformers.pipeline(
             model=model,
             tokenizer=tokenizer,
-            return_full_text=True,  # langchain expects the full text
+            return_full_text=True,  # langchain_community expects the full text
             task='text-generation',
             temperature=temperature,  # 'randomness' of outputs, 0.0 is the min and 1.0 the max
             max_new_tokens=max_new_tokens,  # mex number of tokens to generate in the output

@@ -1,9 +1,9 @@
+sentence-transformers
 gradio
 transformers
 accelerate
 Xformers
 langchain
 bitsandbytes
-sentence_transformers
 faiss-cpu
 PyPDF

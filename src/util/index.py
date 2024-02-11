@@ -2,12 +2,12 @@ import os
 import numpy as np
 import pickle
 
-from langchain.vectorstores import FAISS, Chroma, DocArrayInMemorySearch
-from langchain.embeddings.huggingface import HuggingFaceEmbeddings
-from langchain.document_loaders.csv_loader import CSVLoader
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.document_loaders import PyPDFLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.vectorstores import FAISS, Chroma, DocArrayInMemorySearch
+from langchain_community.embeddings.huggingface import HuggingFaceEmbeddings
+from langchain_community.document_loaders.csv_loader import CSVLoader
+from langchain_community.text_splitter import CharacterTextSplitter
+from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.text_splitter import RecursiveCharacterTextSplitter
 
 def create_vector_store_index(file_path, embedding_model_repo_id="sentence-transformers/all-roberta-large-v1"):
 
